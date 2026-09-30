@@ -1,0 +1,107 @@
+1
+00:00:00,500 --> 00:00:05,200
+Welcome to TenderPulse AI, the autonomous bid compliance engine
+
+2
+00:00:05,200 --> 00:00:09,200
+built for CPCL under the Ministry of Petroleum & Natural Gas.
+
+3
+00:00:09,200 --> 00:00:14,300
+Our live vigilance terminal audits technical dossiers against official NIT rules in real time.
+
+4
+00:00:16,000 --> 00:00:20,000
+Entering the Review Workspace with unified dossier and evidence views.
+
+5
+00:00:20,000 --> 00:00:24,000
+Notice bid 01: all four statutory clauses pass with CVC-grade defensibility,
+
+6
+00:00:24,000 --> 00:00:27,800
+benchmarking vendor eligibility with zero hallucination.
+
+7
+00:00:29,000 --> 00:00:33,000
+Selecting bid 05 from the review queue.
+
+8
+00:00:33,000 --> 00:00:37,200
+The Bid Dossier tab displays our normalized PyMuPDF extraction stream,
+
+9
+00:00:37,200 --> 00:00:41,300
+verifying ₹15 Cr turnover, ISO validity, and SBI bank guarantee.
+
+10
+00:00:42,600 --> 00:00:46,800
+For bid 06, our deterministic date solver detects a statutory failure:
+
+11
+00:00:46,800 --> 00:00:51,200
+the ISO certificate expired in June 2025 against CPCL's Dec 2026 cutoff,
+
+12
+00:00:51,200 --> 00:00:55,400
+eliminating costly clerical oversights that plague manual audits.
+
+13
+00:00:56,500 --> 00:01:01,000
+Now observe bid 11. While naive baselines falsely reject this vendor,
+
+14
+00:01:01,000 --> 00:01:05,200
+TenderPulse AI correctly flags it as CONDITIONAL.
+
+15
+00:01:05,200 --> 00:01:09,800
+The semantic engine recognizes their valid UDYAM certificate,
+
+16
+00:01:09,800 --> 00:01:14,000
+applying MSME turnover relaxation under Clause 4.5 to protect compliant suppliers.
+
+17
+00:01:15,500 --> 00:01:19,800
+Reviewers can toggle high-contrast dark mode for intensive audit sessions.
+
+18
+00:01:19,800 --> 00:01:24,200
+Auditing bid 09 instantly catches a missing EMD bank guarantee,
+
+19
+00:01:24,200 --> 00:01:29,100
+safeguarding public funds from non-serious bidders before tender opening.
+
+20
+00:01:33,200 --> 00:01:38,000
+In the References section, our decision workflow aligns with
+
+21
+00:01:38,000 --> 00:01:42,500
+Government of India eProcurement (GeM / CPPP), SAP Ariba, and Coupa—
+
+22
+00:01:42,500 --> 00:01:46,900
+integrating enterprise standards while keeping all bid data strictly local and secure.
+
+23
+00:01:54,800 --> 00:01:59,500
+The interface emphasizes cognitive clarity over spectacle—
+
+24
+00:01:59,500 --> 00:02:04,500
+combining semantic color hierarchy, accessibility, and verifiable evidence.
+
+25
+00:02:06,000 --> 00:02:10,200
+Returning to the Overview summary.
+
+26
+00:02:10,200 --> 00:02:14,500
+Across all thirteen benchmark dossiers, TenderPulse achieves 100% accuracy—
+
+27
+00:02:14,500 --> 00:02:18,800
+slashing evaluation cycles from five days to seconds with total vigilance transparency.

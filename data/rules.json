@@ -1,0 +1,30 @@
+{
+  "tender_id": "CPCL/PROC/CRUDE-UNIT/2026/NIT-882",
+  "gem_bid_no": "GEM/2026/B/882019",
+  "tender_title": "Turnaround Maintenance, High-Grade Steel Spares & Heat Exchanger Refurbishment for CDU-II",
+  "organization": "Chennai Petroleum Corporation Limited (CPCL) - Ministry of Petroleum & Natural Gas",
+  "location": "Manali Refinery, Chennai - 600068, Tamil Nadu",
+  "rules": {
+    "clause_4_1": {
+      "name": "ISO 9001 Quality Accreditation",
+      "iso_expiry_min": "2026-12-31",
+      "buffer_days_for_conditional": 60
+    },
+    "clause_4_2": {
+      "name": "Minimum Annual Average Turnover",
+      "min_turnover_cr": 5.0,
+      "requires_udin": true,
+      "msme_exemption_clause": "4.5"
+    },
+    "clause_4_3": {
+      "name": "Statutory GSTIN & PAN Verification",
+      "gstin_format_valid": true,
+      "check_mod36_checksum": true
+    },
+    "clause_4_4": {
+      "name": "Earnest Money Deposit (EMD)",
+      "emd_amount_required_inr": 100000,
+      "msme_emd_exemption": true
+    }
+  }
+}

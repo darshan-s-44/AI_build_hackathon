@@ -1,0 +1,42 @@
+[Script Info]
+Title: TenderPulse AI Screen Recording Voiceover
+ScriptType: v4.00+
+WrapStyle: 0
+ScaledBorderAndShadow: yes
+YCbCr Matrix: TV.601
+PlayResX: 1918
+PlayResY: 1032
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: CleanSub,Segoe UI,15,&H00FFFFFF,&H000000FF,&H00000000,&HB00F172A,1,0,0,0,100,100,0.3,0,3,1.0,0,2,30,30,8,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.50,0:00:05.00,CleanSub,,0,0,0,,Welcome to TenderPulse AI, the autonomous bid compliance engine
+Dialogue: 0,0:00:05.00,0:00:09.20,CleanSub,,0,0,0,,built for CPCL under the Ministry of Petroleum & Natural Gas.
+Dialogue: 0,0:00:09.20,0:00:14.30,CleanSub,,0,0,0,,Our live vigilance terminal audits technical dossiers against official NIT rules in real time.
+Dialogue: 0,0:00:16.00,0:00:19.80,CleanSub,,0,0,0,,Entering the Review Workspace with unified dossier and evidence views.
+Dialogue: 0,0:00:19.80,0:00:24.00,CleanSub,,0,0,0,,Notice bid 01: all four statutory clauses pass with CVC-grade defensibility,
+Dialogue: 0,0:00:24.00,0:00:27.80,CleanSub,,0,0,0,,benchmarking vendor eligibility with zero hallucination.
+Dialogue: 0,0:00:29.00,0:00:32.80,CleanSub,,0,0,0,,Selecting bid 05 from the review queue.
+Dialogue: 0,0:00:32.80,0:00:37.00,CleanSub,,0,0,0,,The Bid Dossier tab displays our normalized PyMuPDF extraction stream,
+Dialogue: 0,0:00:37.00,0:00:41.30,CleanSub,,0,0,0,,verifying ₹15 Cr turnover, ISO validity, and SBI bank guarantee.
+Dialogue: 0,0:00:42.60,0:00:46.80,CleanSub,,0,0,0,,For bid 06, our deterministic date solver detects a statutory failure:
+Dialogue: 0,0:00:46.80,0:00:51.20,CleanSub,,0,0,0,,the ISO certificate expired in June 2025 against CPCL's Dec 2026 cutoff,
+Dialogue: 0,0:00:51.20,0:00:55.40,CleanSub,,0,0,0,,eliminating costly clerical oversights that plague manual audits.
+Dialogue: 0,0:00:56.50,0:01:00.80,CleanSub,,0,0,0,,Now observe bid 11. While naive baselines falsely reject this vendor,
+Dialogue: 0,0:01:00.80,0:01:05.00,CleanSub,,0,0,0,,TenderPulse AI correctly flags it as CONDITIONAL.
+Dialogue: 0,0:01:05.00,0:01:09.50,CleanSub,,0,0,0,,The semantic engine recognizes their valid UDYAM certificate,
+Dialogue: 0,0:01:09.50,0:01:14.00,CleanSub,,0,0,0,,applying MSME turnover relaxation under Clause 4.5 to protect compliant suppliers.
+Dialogue: 0,0:01:15.50,0:01:19.80,CleanSub,,0,0,0,,Reviewers can toggle high-contrast dark mode for intensive audit sessions.
+Dialogue: 0,0:01:19.80,0:01:24.20,CleanSub,,0,0,0,,Auditing bid 09 instantly catches a missing EMD bank guarantee,
+Dialogue: 0,0:01:24.20,0:01:29.10,CleanSub,,0,0,0,,safeguarding public funds from non-serious bidders before tender opening.
+Dialogue: 0,0:01:33.20,0:01:37.50,CleanSub,,0,0,0,,In the References section, our decision workflow aligns with
+Dialogue: 0,0:01:37.50,0:01:42.20,CleanSub,,0,0,0,,Government of India eProcurement (GeM / CPPP), SAP Ariba, and Coupa—
+Dialogue: 0,0:01:42.20,0:01:46.90,CleanSub,,0,0,0,,integrating enterprise standards while keeping all bid data strictly local and secure.
+Dialogue: 0,0:01:54.80,0:01:59.50,CleanSub,,0,0,0,,The interface emphasizes cognitive clarity over spectacle—
+Dialogue: 0,0:01:59.50,0:02:04.50,CleanSub,,0,0,0,,combining semantic color hierarchy, accessibility, and verifiable evidence.
+Dialogue: 0,0:02:06.00,0:02:10.20,CleanSub,,0,0,0,,Returning to the Overview summary.
+Dialogue: 0,0:02:10.20,0:02:14.50,CleanSub,,0,0,0,,Across all thirteen benchmark dossiers, TenderPulse achieves 100% accuracy—
+Dialogue: 0,0:02:14.50,0:02:18.80,CleanSub,,0,0,0,,slashing evaluation cycles from five days to seconds with total vigilance transparency.

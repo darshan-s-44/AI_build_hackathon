@@ -1,0 +1,452 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f8fa">
+  <meta name="description" content="An evidence-led design proposal for TenderPulse AI: a procurement review workspace that connects bid decisions to tender clauses and source evidence.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TenderPulse — Evidence-led procurement review">
+  <meta property="og:description" content="A clear, auditable design proposal for tender bid compliance review.">
+  <meta property="og:site_name" content="TenderPulse Dashboard Design">
+  <meta property="og:image" content="/assets/tenderpulse-platform-icon.png">
+  <meta property="og:image:alt" content="TenderPulse document and verification mark">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="/assets/tenderpulse-platform-icon.png">
+  <!-- Add canonical and og:url only after authorized publication establishes the real public origin. -->
+  <link rel="icon" type="image/png" href="/assets/tenderpulse-platform-icon.png">
+  
+  <link rel="stylesheet" href="/styles.css">
+  <title>TenderPulse — Evidence-led procurement review</title>
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top" aria-label="TenderPulse home">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="/assets/tenderpulse-platform-icon.png" alt="" width="38" height="38">
+        </span>
+        <span class="brand-copy"><strong>TenderPulse</strong><small>Dashboard design</small></span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="menu-lines" aria-hidden="true"></span><span class="sr-only">Open navigation</span>
+      </button>
+      <nav class="primary-nav" id="primary-nav" aria-label="Main navigation">
+        <a href="#overview">Overview</a>
+        <a href="#workspace">Workspace</a>
+        <a href="#references">References</a>
+        <a href="#implementation">Project fit</a>
+      </nav>
+      <a class="header-cta" href="#references">Explore sources <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero page-wrap" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> TenderPulse AI <span class="eyebrow-divider">/</span> Design proposal</div>
+        <h1 id="hero-title">From tender dossier to a <em>decision you can defend.</em></h1>
+        <p class="hero-lede">A procurement review workspace that connects every PASS, CONDITIONAL, or FAIL decision to the clause and evidence behind it.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#workspace">Explore the review workspace <span aria-hidden="true">→</span></a>
+          <a class="button button-secondary" href="#references">Browse real references</a>
+        </div>
+        <div class="hero-footnote"><span class="proposal-tag">DESIGN PROPOSAL</span> Companion concept for the TenderPulse project; not an official CPCL or government portal.</div>
+      </div>
+      <div class="hero-art-wrap">
+        <div class="hero-art-frame">
+          <div class="hero-preview-card">
+            <div class="hpc-header">
+              <span class="hpc-badge"><span class="hpc-dot"></span> LIVE VIGILANCE AUDIT</span>
+              <span class="hpc-tag">CPCL-NIT-882 &middot; ACTIVE</span>
+            </div>
+            <div class="hpc-title-box">
+              <h4>Technip Energies India Ltd</h4>
+              <div class="hpc-meta">Dossier: 104 pgs &middot; Cat: Refinery EPC Equipment &middot; &#8377;24.5 Cr</div>
+            </div>
+            <div class="hpc-clauses">
+              <div class="hpc-clause-row">
+                <span class="hpc-clause-id">Cl 4.1</span>
+                <span class="hpc-clause-name">ISO 9001:2015 Validity (TUV NORD)</span>
+                <span class="hpc-clause-status">&#10003; VALID (2027-11-14)</span>
+              </div>
+              <div class="hpc-clause-row">
+                <span class="hpc-clause-id">Cl 4.2</span>
+                <span class="hpc-clause-name">3-Yr Annual Turnover (&ge; &#8377;45 Cr)</span>
+                <span class="hpc-clause-status">&#10003; &#8377;68.4 Cr (PASS)</span>
+              </div>
+              <div class="hpc-clause-row">
+                <span class="hpc-clause-id">Cl 4.3</span>
+                <span class="hpc-clause-name">GSTIN Mod-36 Checksum &amp; Active State</span>
+                <span class="hpc-clause-status">&#10003; 33AAACT0123M1Z8</span>
+              </div>
+              <div class="hpc-clause-row">
+                <span class="hpc-clause-id">Cl 4.4</span>
+                <span class="hpc-clause-name">EMD Bank Guarantee (SBI &#8377;15.0 L)</span>
+                <span class="hpc-clause-status">&#10003; 285 DAYS (PASS)</span>
+              </div>
+            </div>
+            <div class="hpc-footer-metrics">
+              <div>
+                <small>CONFIDENCE</small>
+                <strong style="color: var(--green);">98.6%</strong>
+              </div>
+              <div>
+                <small>FRAUD RISK</small>
+                <strong style="color: var(--blue);">0.04 (LOW)</strong>
+              </div>
+              <div>
+                <small>AUDIT HASH</small>
+                <code>e3b0c442...a89f</code>
+              </div>
+            </div>
+          </div>
+          <div class="art-caption"><span class="caption-mark" aria-hidden="true">&#10003;</span><span><strong>Clause &rarr; evidence &rarr; outcome</strong><small>Make the audit trail visible at decision time</small></span></div>
+        </div>
+        <div class="art-orbit orbit-one" aria-hidden="true"></div>
+        <div class="art-orbit orbit-two" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="principle-strip" aria-label="Design principles">
+      <div class="page-wrap principle-inner">
+        <div><span class="principle-number">01</span><span><strong>Evidence first</strong><small>Every finding has a source</small></span></div>
+        <div><span class="principle-number">02</span><span><strong>Three clear outcomes</strong><small>PASS · CONDITIONAL · FAIL</small></span></div>
+        <div><span class="principle-number">03</span><span><strong>Audit-ready by design</strong><small>Context and checks stay visible</small></span></div>
+      </div>
+    </section>
+
+    <section class="section page-wrap" id="overview" aria-labelledby="overview-title">
+      <div class="section-heading section-heading-row">
+        <div>
+          <span class="section-kicker">01 / Overview screen</span>
+          <h2 id="overview-title">A queue that points to the next decision.</h2>
+          <p>Start with the review workload and its exceptions. Keep summary counts small, labeled, and one click away from the dossiers behind them.</p>
+        </div>
+        <div class="demo-notice"><span aria-hidden="true">i</span><p><strong>Illustrative benchmark only</strong><br>Counts below reflect the 13-case evaluation set reported in the project README—not live tender operations.</p></div>
+      </div>
+
+      <div class="overview-demo" role="region" aria-label="Static concept of a procurement bid overview">
+        <div class="demo-topbar">
+          <div class="demo-product"><span class="demo-icon">T</span><span><strong>Procurement workspace</strong><small>CPCL · Evaluation desk</small></span></div>
+          <div class="demo-top-actions"><span class="demo-chip">STATIC CONCEPT</span><span class="demo-avatar" aria-hidden="true">R</span></div>
+        </div>
+        <div class="demo-body">
+          <aside class="demo-sidebar" aria-label="Concept navigation">
+            <span class="demo-nav-label">WORKSPACE</span>
+            <a class="demo-nav-item active" href="#overview"><span class="nav-glyph">▦</span> Overview</a>
+            <a class="demo-nav-item" href="#workspace"><span class="nav-glyph">▤</span> Bid reviews</a>
+            <a class="demo-nav-item" href="#references"><span class="nav-glyph">⌕</span> Tender rules</a>
+            <a class="demo-nav-item" href="#implementation"><span class="nav-glyph">≋</span> Audit trail</a>
+            <div class="sidebar-note"><span class="sidebar-note-icon">✓</span><strong>Decision support</strong><small>Review remains with the officer.</small></div>
+          </aside>
+          <div class="demo-main">
+            <div class="demo-title-row"><div><span class="demo-overline">BID COMPLIANCE / DESIGN CONCEPT</span><h3>Review overview</h3><p>Evaluation set · 13 dossier examples</p></div><a class="demo-action" href="#workspace">Open review queue <span aria-hidden="true">→</span></a></div>
+            <div class="metric-grid">
+              <article class="metric-card"><span class="metric-label">Dossiers in example set</span><strong id="metricTotal">13</strong><small>Evaluated CPCL benchmark</small></article>
+              <article class="metric-card metric-pass"><span class="metric-label">PASS</span><strong id="metricPass">05</strong><small>Fully compliant</small></article>
+              <article class="metric-card metric-review"><span class="metric-label">CONDITIONAL</span><strong id="metricCond">02</strong><small>Officer review indicated</small></article>
+              <article class="metric-card metric-reject"><span class="metric-label">FAIL</span><strong id="metricFail">06</strong><small>Deficit / Disqualified</small></article>
+            </div>
+            <div class="demo-table-card">
+              <div class="table-head"><div><h4>Recent dossier reviews</h4><span>Sample rows · not live procurement data</span></div><a href="#workspace">View concept <span aria-hidden="true">↗</span></a></div>
+              <div class="table-scroll"><table class="demo-table">
+                <thead><tr><th scope="col">DOSSIER</th><th scope="col">REVIEW NOTE</th><th scope="col">STATUS</th><th scope="col">ACTION</th></tr></thead>
+                <tbody id="overviewTableBody">
+                  <!-- Dynamically populated by app.js -->
+                </tbody>
+              </table></div>
+            </div>
+            <div class="demo-bottom-note"><span class="note-icon">i</span> The counts are drawn from the README’s reference evaluation table. The set combines synthetic cases and a vendor-format example; it is not live operational reporting.</div>
+          </div>
+        </div>
+        <div class="demo-watermark">CONCEPT UI · DEMO DATA</div>
+      </div>
+    </section>
+
+    <section class="workspace-section" id="workspace" aria-labelledby="workspace-title">
+      <div class="page-wrap section">
+        <div class="section-heading workspace-heading">
+          <div><span class="section-kicker">02 / Review workspace</span><h2 id="workspace-title">Three views. One defensible finding.</h2><p>Keep the selected dossier, the rule result, and the source evidence in the same visual frame&mdash;so a reviewer can check the reasoning without losing context.</p></div>
+          <div class="workspace-legend"><span><i class="legend-pass"></i> Compliant</span><span><i class="legend-review"></i> Review needed</span><span><i class="legend-fail"></i> Failed</span></div>
+        </div>
+
+        <div class="review-board" role="region" aria-label="Live bid review workspace">
+          <!-- Top context banner -->
+          <div class="review-board-head">
+            <div class="review-context">
+              <span class="context-icon">&#127963;</span>
+              <div>
+                <span class="demo-overline">ACTIVE VENDOR DOSSIER</span>
+                <strong id="activeDossierName">cpcl_vendor_bid_technip.pdf</strong>
+              </div>
+            </div>
+            <div class="review-head-meta">
+              <span class="context-tender">Tender: CPCL/PROC/CRUDE-UNIT/2026/NIT-882</span>
+              <span class="status status-pass" id="activeStatusPill"><i></i> PASS</span>
+            </div>
+          </div>
+
+          <!-- Interactive Action Bar -->
+          <div class="workspace-action-bar">
+            <div class="wab-left">
+              <span>Target: <strong>Chennai Petroleum Corporation Limited (CPCL)</strong></span>
+              <span style="color:#cbd5e1;">|</span>
+              <span>Tender: <strong>NIT-882 (CDU-II Refinery Package)</strong></span>
+              <span style="color:#cbd5e1;">|</span>
+              <span id="auditStatusIndicator" style="color:var(--teal-dark); font-weight:700;">Status: Ready for audit</span>
+            </div>
+            <div class="wab-actions">
+              <button class="btn-action btn-audit" id="runBtn" onclick="runVerification()">
+                <span id="runBtnIcon">&#9654;</span>
+                <span id="runBtnText">Audit Selected Dossier</span>
+              </button>
+              <button class="btn-action btn-export" id="exportBtn" onclick="exportPdfReport()">
+                <span>&#128229;</span>
+                <span id="exportBtnText">Export Vigilance PDF</span>
+              </button>
+              <button class="btn-action" onclick="testGstinPrompt()">
+                <span>&#9889;</span> Test GSTIN Mod-36
+              </button>
+            </div>
+          </div>
+
+          <!-- 4 Score Cards -->
+          <div class="workspace-scores-grid">
+            <div class="w-score-card">
+              <div class="w-score-label">Expected Verdict</div>
+              <div class="w-score-val pass" id="expectedVal">PASS</div>
+              <div class="w-score-sub" id="expectedSub">CPCL Ground Truth</div>
+            </div>
+            <div class="w-score-card">
+              <div class="w-score-label">Baseline (Regex Only)</div>
+              <div class="w-score-val pass" id="baselineVal">PASS</div>
+              <div class="w-score-sub" id="baselineSub">&#10003; Accurate (0.002s)</div>
+            </div>
+            <div class="w-score-card">
+              <div class="w-score-label">TenderPulse AI Verdict</div>
+              <div class="w-score-val pass" id="agentVal">PASS</div>
+              <div class="w-score-sub" id="agentSub">&#10003; Multi-Tool Agent (0.003s)</div>
+            </div>
+            <div class="w-score-card">
+              <div class="w-score-label">Confidence &amp; Risk</div>
+              <div class="w-score-val pass" id="confRiskVal">98%</div>
+              <div class="w-score-sub" id="confRiskSub">Risk: LOW (4%)</div>
+            </div>
+          </div>
+
+          <!-- 3-Column Review Columns -->
+          <div class="review-columns">
+            <!-- Column 1: Review Queue -->
+            <aside class="review-queue">
+              <div class="pane-heading">
+                <h3>Review queue</h3>
+                <span id="queueCount">13 packages</span>
+              </div>
+              <input type="text" class="queue-search" id="queueSearch" placeholder="&#128269; Search dossier name…" oninput="filterQueue(this.value)" style="width:100%; box-sizing:border-box; outline:none; font-size:12px; padding:7px 11px; margin-bottom:10px;" />
+              <div id="queueRows">
+                <!-- Populated dynamically -->
+              </div>
+              <div class="queue-footnote">Click any dossier to inspect extracted text and run dual-layer audit.</div>
+            </aside>
+
+            <!-- Column 2: Clause Checks -->
+            <section class="review-rules" aria-labelledby="rules-title">
+              <div class="pane-heading">
+                <h3 id="rules-title">Clause checks</h3>
+                <span>4 requirements</span>
+              </div>
+              <div id="rulesList">
+                <!-- Populated dynamically -->
+              </div>
+              <div class="conditional-callout" id="conditionalCallout" style="display:none; margin-top:14px;">
+                <strong id="calloutTitle">Why CONDITIONAL?</strong>
+                <p id="calloutBody">Turnover is marginally below threshold; valid MSME exemption certificate provided under Clause 4.5.</p>
+              </div>
+            </section>
+
+            <!-- Column 3: Split-Screen Dual-Tab Workspace (Trajectory & Dossier Evidence) -->
+            <aside class="evidence-pane">
+              <!-- Dual-Tab switcher (User Feature: media_1790788398108.png) -->
+              <div class="workspace-tabs">
+                <button class="tab-btn" id="tabTrajectory" onclick="switchTab('trajectory')">
+                  &#129504; Agent Reasoning Trajectory
+                </button>
+                <button class="tab-btn active" id="tabDocument" onclick="switchTab('document')">
+                  &#128196; Bid Dossier &amp; Evidence Highlights
+                </button>
+              </div>
+
+              <!-- Tab 1: Bid Dossier & Evidence Highlights View (The User's Feature!) -->
+              <div id="viewDocument">
+                <div class="doc-viewer-wrap">
+                  <div class="doc-header-banner">
+                    <span id="docViewerTitle">Vendor Dossier Text Stream</span>
+                    <span style="font-size:11px; color:var(--teal-dark); background:white; padding:3px 7px; border-radius:4px; border:1px solid #cce8eb; font-weight:700;">Parsed via PyMuPDF</span>
+                  </div>
+                  <div class="doc-page-box" id="docPageBox">
+                    Select a bid package to preview its text and clause citations.
+                  </div>
+                </div>
+                <div id="evidenceCardsWrap" style="margin-top:14px;">
+                  <div class="source-card">
+                    <div class="source-file-line">
+                      <span class="queue-file-icon">PDF</span>
+                      <span><strong id="sourceCardFileName">cpcl_vendor_bid_technip.pdf</strong><small>Extracted &amp; Verified by TenderPulse AI</small></span>
+                    </div>
+                    <div class="evidence-excerpt" id="evidenceExcerptBox">
+                      <span class="excerpt-label" id="excerptLabel">CLAUSE CITATION &amp; AUDIT EXCERPT</span>
+                      <p id="excerptText">Loading verified clause evidence from dossier…</p>
+                      <span class="excerpt-source" id="excerptSource">Source: CPCL Refinery EPC Dossier</span>
+                    </div>
+                  </div>
+                  <div class="rationale-card" id="rationaleCard">
+                    <span class="rationale-label">VIGILANCE OFFICER RATIONALE</span>
+                    <p id="rationaleText">All statutory clauses (ISO 9001, Turnover, Mod-36 GSTIN, EMD) verified with zero-hallucination mathematical consistency.</p>
+                    <span class="proposed-tag">ZERO-HALLUCINATION AUDIT</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tab 2: Agent Reasoning Trajectory View -->
+              <div id="viewTrajectory" style="display:none;">
+                <div class="trace-stream" id="traceStream">
+                  <!-- Populated dynamically -->
+                </div>
+              </div>
+            </aside>
+          </div>
+
+          <div class="review-board-footer">
+            <span><i class="footer-dot"></i> Grounded in verifiable PDF text, statutory checksums, and date arithmetic</span>
+            <span>Audit Trail Defensible under CVC &amp; GeM Guidelines</span>
+          </div>
+          <div class="demo-watermark">CPCL / NIT-882 &middot; LIVE DECISION ENGINE</div>
+        </div>
+      </div>
+    </section>
+
+        <section class="section page-wrap" id="flow" aria-labelledby="flow-title">
+      <div class="section-heading section-heading-row">
+        <div><span class="section-kicker">03 / Reviewer workflow</span><h2 id="flow-title">Keep the human decision in the loop.</h2><p>The interface should make deterministic checks, semantic review, source material, and officer judgment distinguishable—not collapse them into one opaque score.</p></div>
+        <div class="flow-note"><strong>Recommendation, not current behavior</strong><span>Reviewer notes and assignment are design proposals. Confirm the backend can store them before presenting them as working features.</span></div>
+      </div>
+      <ol class="flow-steps">
+        <li><span class="step-number">01</span><div class="step-icon step-icon-blue">⇣</div><h3>Select a dossier</h3><p>Open a listed bid and verify its tender context. The current demo API exposes a preloaded bid list.</p><span class="step-kind">CURRENT DEMO INPUT</span></li>
+        <li><span class="step-number">02</span><div class="step-icon step-icon-teal">⌘</div><h3>Run clause checks</h3><p>Show required values, extracted values, deterministic outcomes and any exception under the correct tender clause.</p><span class="step-kind">CURRENT VERIFICATION FLOW</span></li>
+        <li><span class="step-number">03</span><div class="step-icon step-icon-amber">⌕</div><h3>Inspect source evidence</h3><p>Open the extracted document text and follow each result to its source file and passage; never hide the basis for a decision.</p><span class="step-kind">CURRENT TEXT EXTRACTION</span></li>
+        <li><span class="step-number">04</span><div class="step-icon step-icon-slate">✎</div><h3>Record review context</h3><p>Capture an officer note for conditional exceptions, unclear evidence, and follow-up. This requires a future review-note capability.</p><span class="step-kind proposed-kind">PROPOSED EXTENSION</span></li>
+        <li><span class="step-number">05</span><div class="step-icon step-icon-navy">↗</div><h3>Reach and export a decision</h3><p>Keep PASS / CONDITIONAL / FAIL distinct, preserve the audit trail, and use the current PDF report export where appropriate.</p><span class="step-kind">CURRENT EXPORT · HUMAN REVIEW</span></li>
+      </ol>
+    </section>
+
+    <section class="references-section" id="references" aria-labelledby="references-title">
+      <div class="page-wrap section">
+        <div class="section-heading section-heading-row">
+          <div><span class="section-kicker">04 / Real product references</span><h2 id="references-title">Borrow the workflow. Keep the evidence local.</h2><p>These live public sites and official guides informed the patterns below. They are independent products; links do not imply endorsement, affiliation, or integration.</p></div>
+          <a class="text-link" href="#source-notes">View source notes <span aria-hidden="true">↘</span></a>
+        </div>
+        <div class="reference-controls" role="group" aria-label="Filter references by source type">
+          <button class="filter-button is-active" type="button" data-filter="all" aria-pressed="true">All references <span>6</span></button>
+          <button class="filter-button" type="button" data-filter="portal" aria-pressed="false">Public portal</button>
+          <button class="filter-button" type="button" data-filter="docs" aria-pressed="false">Official documentation</button>
+          <button class="filter-button" type="button" data-filter="product" aria-pressed="false">Product pages</button>
+          <button class="filter-button" type="button" data-filter="guidance" aria-pressed="false">Design guidance</button>
+          <span class="filter-status" aria-live="polite">Showing 6 references</span>
+        </div>
+        <div class="reference-grid">
+          <article class="reference-card" data-type="portal">
+            <div class="reference-card-top"><span class="reference-type type-portal">PUBLIC PORTAL</span><span class="reference-number">01</span></div>
+            <h3>Government of India eProcurement</h3><p>A live tender portal with active tender notices, reference numbers, closing dates, corrigenda, search, and bid awards.</p>
+            <div class="borrow-row"><strong>Borrow</strong><span>Identifier-first tables, visible search, deadline and status context.</span></div>
+            <a href="https://eprocure.gov.in/eprocure/app" target="_blank" rel="noopener noreferrer">Visit the live portal <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="reference-card" data-type="docs">
+            <div class="reference-card-top"><span class="reference-type type-docs">OFFICIAL PRODUCT DOCS</span><span class="reference-number">02</span></div>
+            <h3>SAP Ariba Sourcing Dashboard</h3><p>SAP’s guide describes dashboard tabs, search, action tiles, filtered tables, and role-sensitive tasks.</p>
+            <div class="borrow-row"><strong>Borrow</strong><span>Filter context, reusable task tiles, column-level table search.</span></div>
+            <a href="https://help.sap.com/docs/strategic-sourcing/sap-ariba-product-sourcing/using-product-sourcing-dashboard" target="_blank" rel="noopener noreferrer">Read the SAP guide <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="reference-card" data-type="product">
+            <div class="reference-card-top"><span class="reference-type type-product">PRODUCT PAGE</span><span class="reference-number">03</span></div>
+            <h3>PlanetBids procurement</h3><p>A public-agency procurement platform organized around planning, sourcing, evaluation, awards, and vendor management.</p>
+            <div class="borrow-row"><strong>Borrow</strong><span>Show where bid evaluation fits in a transparent procurement lifecycle.</span></div>
+            <a href="https://home.planetbids.com/" target="_blank" rel="noopener noreferrer">Visit PlanetBids <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="reference-card" data-type="product">
+            <div class="reference-card-top"><span class="reference-type type-product">PRODUCT PAGE</span><span class="reference-number">04</span></div>
+            <h3>Coupa Procurement</h3><p>Enterprise procurement product information covering approvals, supplier risk, compliance, and spend visibility.</p>
+            <div class="borrow-row"><strong>Borrow</strong><span>Concise task status and risk context at decision time—not spend metrics.</span></div>
+            <a href="https://www.coupa.com/products/procure-to-pay/procurement/" target="_blank" rel="noopener noreferrer">Visit Coupa Procurement <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="reference-card" data-type="docs">
+            <div class="reference-card-top"><span class="reference-type type-docs">OFFICIAL PRODUCT DOCS</span><span class="reference-number">05</span></div>
+            <h3>Coupa Supplier Dashboard</h3><p>Official documentation for dashboard metrics, buyer/currency filters, overdue trends, and transaction views.</p>
+            <div class="borrow-row"><strong>Borrow</strong><span>Make active filters explicit and connect each summary to detail.</span></div>
+            <a href="https://compass.coupa.com/en-us/products/product-documentation/supplier-resources/for-suppliers/coupa-supplier-portal/set-up-the-csp/supplier-dashboard/supplier-dashboard-for-payments-insights" target="_blank" rel="noopener noreferrer">Read Coupa documentation <span aria-hidden="true">↗</span></a>
+          </article>
+          <article class="reference-card" data-type="guidance">
+            <div class="reference-card-top"><span class="reference-type type-guidance">COMPLIANCE GUIDANCE</span><span class="reference-number">06</span></div>
+            <h3>MetricStream &amp; Apptega</h3><p>Two compliance dashboard guides discuss issue severity, evidence, audit logs, control status, and actionable views.</p>
+            <div class="borrow-row"><strong>Borrow</strong><span>Separate summary from operator detail; connect issues to evidence and history.</span></div>
+            <div class="dual-links"><a href="https://www.metricstream.com/learn/compliance-dashboard.html" target="_blank" rel="noopener noreferrer">MetricStream guide ↗</a><a href="https://www.apptega.com/glossary/compliance-dashboard" target="_blank" rel="noopener noreferrer">Apptega guide ↗</a></div>
+          </article>
+        </div>
+        <div class="reference-disclaimer"><span class="disclaimer-icon">i</span><p><strong>Reference boundary.</strong> The eProcurement link is a public government portal. SAP/Coupa links are official product documentation; PlanetBids/Coupa Procurement are product pages; MetricStream/Apptega are guidance articles. Interface patterns are observations and recommendations—not product endorsements or copied assets.</p></div>
+      </div>
+    </section>
+
+    <section class="section page-wrap" id="design-system" aria-labelledby="design-title">
+      <div class="section-heading"><span class="section-kicker">05 / Visual system</span><h2 id="design-title">Calm by default. Clear under scrutiny.</h2><p>Use neutral surfaces and a strong type hierarchy so the decision and its evidence stand out. Reserve color for meaning, not decoration.</p></div>
+      <div class="design-system-grid">
+        <div class="system-panel palette-panel"><div class="panel-title-row"><h3>Color with a job</h3><span>STATUS ALWAYS HAS A LABEL</span></div><div class="swatch-row"><div class="swatch"><i style="--swatch:#20384f"></i><span><strong>Navy</strong><small>#20384F · structure</small></span></div><div class="swatch"><i style="--swatch:#0e8c88"></i><span><strong>Teal</strong><small>#0E8C88 · brand/action</small></span></div><div class="swatch"><i style="--swatch:#21824b"></i><span><strong>Pass</strong><small>#21824B · compliant</small></span></div><div class="swatch"><i style="--swatch:#946200"></i><span><strong>Review</strong><small>#946200 · conditional</small></span></div><div class="swatch"><i style="--swatch:#b64747"></i><span><strong>Fail</strong><small>#B64747 · failed rule</small></span></div></div><div class="contrast-note"><span class="status status-pass"><i></i> PASS</span><span class="status status-conditional"><i></i> CONDITIONAL</span><span class="status status-reject"><i></i> FAIL</span><p>Never rely on color alone to communicate status.</p></div></div>
+        <div class="system-panel type-panel"><div class="panel-title-row"><h3>Type &amp; spacing</h3><span>READABLE AT REVIEW SPEED</span></div><div class="type-sample"><span>HEADLINE / 40–56 px</span><strong>Clarity over spectacle.</strong></div><div class="type-meta"><div><strong>Sans-serif</strong><span>Readable system stack for headings and body copy.</span></div><div><strong>Monospace</strong><span>Clause IDs, reference numbers, raw extracted values.</span></div><div><strong>8 px rhythm</strong><span>Consistent spacing, compact tables, generous section breaks.</span></div></div></div>
+      </div>
+      <div class="accessibility-band"><span class="accessibility-check">✓</span><div><strong>Built for keyboard, touch, and reduced motion</strong><p>Use visible focus rings, meaningful headings, semantic tables, large tap targets, descriptive links, and `prefers-reduced-motion`. Responsive layouts should collapse the queue into a drawer or tab—not hide the evidence relationship.</p></div></div>
+    </section>
+
+    <section class="fit-section" id="implementation" aria-labelledby="implementation-title">
+      <div class="page-wrap section">
+        <div class="section-heading section-heading-row">
+          <div><span class="section-kicker">06 / Existing-project fit</span><h2 id="implementation-title">Fit the design to the code that exists.</h2><p>We inspected the provided ZIP’s README, `app.py`, and `web/index.html`. The README calls this a full-stack platform, but the inspected server is Python’s standard-library `http.server` handler—not Flask.</p></div>
+          <div class="fit-callout"><strong>Keep the current stack.</strong><span>This companion site is a separate design proposal. It does not alter the existing app or claim to integrate with any external procurement platform.</span></div>
+        </div>
+        <div class="api-map">
+          <div class="api-map-head"><span>EXISTING SERVER SURFACE</span><span>Observed in supplied `app.py`</span></div>
+          <div class="api-row"><code>GET /api/list_bids</code><span>Returns the preloaded sample PDF list</span><span class="api-kind kind-current">CURRENT</span></div>
+          <div class="api-row"><code>GET /api/rules</code><span>Reads the configured tender rule JSON</span><span class="api-kind kind-current">CURRENT</span></div>
+          <div class="api-row"><code>POST /api/verify</code><span>Runs baseline + agent checks; returns preview text and trajectory steps</span><span class="api-kind kind-current">CURRENT</span></div>
+          <div class="api-row"><code>GET /api/pdf_text</code><span>Extracts dossier text for the document view</span><span class="api-kind kind-current">CURRENT</span></div>
+          <div class="api-row"><code>GET /api/export_pdf_report</code><span>Generates and returns an audit PDF</span><span class="api-kind kind-current">CURRENT</span></div>
+          <div class="api-row"><code>GET /api/verify_gstin</code><span>Validates a GSTIN value using the local verifier</span><span class="api-kind kind-current">CURRENT</span></div>
+          <div class="api-map-foot"><span class="foot-alert">!</span><p><strong>Upload control not verified:</strong> although the README’s demo script describes uploading, no bid-upload route is defined in the inspected `app.py`. Confirm or implement it before showing a working upload action.</p></div>
+        </div>
+        <div class="roadmap-heading"><span class="section-kicker">A practical implementation sequence</span><span class="roadmap-caption">Suggested next steps · not committed changes</span></div>
+        <div class="roadmap-grid">
+          <article class="roadmap-card"><span class="roadmap-step">01</span><h3>Reorganize the current view</h3><p>Introduce Overview and Bid Review entry points; preserve the existing queue, rules, scorecard, trajectory/document tabs, and PDF export.</p><span class="roadmap-label">LAYOUT + NAVIGATION</span></article>
+          <article class="roadmap-card"><span class="roadmap-step">02</span><h3>Connect findings to proof</h3><p>Keep each clause, extracted value, outcome and source passage together. Use only the API fields the verifier actually returns.</p><span class="roadmap-label">EVIDENCE + PROVENANCE</span></article>
+          <article class="roadmap-card"><span class="roadmap-step">03</span><h3>Add review workflow deliberately</h3><p>Define officer notes, assignments, and persistence only after the data contract and server endpoints exist; retain a clear human decision step.</p><span class="roadmap-label">REVIEWER CONTROLS</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="source-notes-section" id="source-notes" aria-labelledby="source-notes-title">
+      <div class="page-wrap source-notes-grid">
+        <div><span class="section-kicker">07 / Sources &amp; qualifications</span><h2 id="source-notes-title">What is verified. What is proposed.</h2><p>This page brings together external product references and a design proposal for the supplied TenderPulse project. Keep those evidence types separate.</p></div>
+        <div class="notes-list">
+          <details open><summary>Project source</summary><p>Based on the supplied <code>AI Build Challenge.zip</code>, its README, inspected `app.py` and `web/index.html`, and the synthetic dossier `bid_11_conditional_msme.pdf`. The README reports a 13/13 benchmark result; this site does not independently validate that claim.</p></details>
+          <details><summary>External references</summary><p>Every reference card links directly to the source. Product naming and marks belong to their owners. These pages are cited only for interface/workflow patterns; they do not imply endorsement, partnership, or integration with TenderPulse.</p></details>
+          <details><summary>Demo and public-release status</summary><p>All example counts and dossier fields are labeled as sample or README-reported benchmark data. No live tender feed, supplier database, or production analytics are shown. This companion website remains a preview until separately authorized for public publishing.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="page-wrap footer-inner"><a class="brand footer-brand" href="#top"><span class="brand-mark" aria-hidden="true"><img src="/assets/tenderpulse-platform-icon.png" alt="" width="34" height="34"></span><span class="brand-copy"><strong>TenderPulse</strong><small>Dashboard design</small></span></a><p>Evidence-led interface proposal · Informational concept, not an official procurement portal.</p><a href="#top" class="back-top">Back to top ↑</a></div>
+  </footer>
+  <div class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
