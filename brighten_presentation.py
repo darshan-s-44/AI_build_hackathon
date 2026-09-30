@@ -363,24 +363,48 @@ def build_brightened_presentation():
     print("Intermediate presentation saved.")
 
     # -------------------------------------------------------------
-    # 2. BACKGROUND TEXTURE BRIGHTENING
+    # 2. REMOVE MOSAIC PIXEL BOXES & BRIGHTEN BACKGROUND TEXTURES
     # -------------------------------------------------------------
-    # Smoothly lift the pitch-black background images to a deep luminous studio glow
     temp_dir = "temp_pptx_brighten"
     if os.path.exists(temp_dir):
         shutil.rmtree(temp_dir)
     with zipfile.ZipFile("temp_brightened.pptx", "r") as z:
         z.extractall(temp_dir)
 
+    # Process all slide background images
     for img_name in ['image2.png', 'image3.png', 'image4.png', 'image5.png']:
         img_path = os.path.join(temp_dir, 'ppt', 'media', img_name)
         if os.path.exists(img_path):
             img = cv2.imread(img_path)
-            # Smoothly lift brightness from pitch black (~13) to deep luminous studio tone (~54):
-            # formula: val * 1.5 + 34
+            
+            # Step A: Seamlessly eradicate the decorative pixel boxes at y=0..72
+            # Extrapolate smoothly from clean rows 73..110 upward
+            grad = (img[110, :, :].astype(float) - img[73, :, :].astype(float)) / 37.0
+            for y in range(73):
+                val = img[73, :, :].astype(float) - grad * (73 - y)
+                img[y, :, :] = np.clip(val, 0, 255).astype(np.uint8)
+                
+            # Soft vertical blur across the boundary (y=65..80) to eliminate any seam
+            img[65:80, :, :] = cv2.GaussianBlur(img[65:80, :, :], (1, 11), 0)
+            
+            # Step B: Lift background to luminous warm studio ambiance
             brightened = np.clip(img.astype(float) * 1.5 + 34, 0, 255).astype('uint8')
             cv2.imwrite(img_path, brightened)
-            print(f"Brightened {img_name}: mean before={img.mean():.1f} -> after={brightened.mean():.1f}")
+            print(f"Cleaned boxes & brightened {img_name} successfully.")
+
+    # Process image1.png (the social card graphic on Slide 3) to also remove any pixel boxes
+    img1_path = os.path.join(temp_dir, 'ppt', 'media', 'image1.png')
+    if os.path.exists(img1_path):
+        img1 = cv2.imread(img1_path)
+        mask = np.zeros((img1.shape[0], img1.shape[1]), dtype=np.uint8)
+        for y in range(85):
+            for x in range(650):
+                if img1[y, x].max() > 25:
+                    mask[y, x] = 255
+        mask = cv2.dilate(mask, np.ones((3,3), np.uint8), iterations=1)
+        cleaned_img1 = cv2.inpaint(img1, mask, 5, cv2.INPAINT_TELEA)
+        cv2.imwrite(img1_path, cleaned_img1)
+        print("Cleaned boxes on image1.png successfully.")
 
     # Re-zip into final PPTX
     def zip_dir(src_dir, output_zip):
@@ -396,7 +420,7 @@ def build_brightened_presentation():
     shutil.rmtree(temp_dir)
     if os.path.exists("temp_brightened.pptx"):
         os.remove("temp_brightened.pptx")
-    print(f"SUCCESS: Built brightened presentation at {TARGET_DOWNLOAD} and {TARGET_WORKSPACE}")
+    print(f"SUCCESS: Built presentation without boxes at {TARGET_DOWNLOAD} and {TARGET_WORKSPACE}")
 
 if __name__ == "__main__":
     build_brightened_presentation()
