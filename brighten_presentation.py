@@ -75,7 +75,7 @@ def build_brightened_presentation():
         elif "[PS-0X · Title]" in txt:
             set_text(s, "PS-04 · AI Decision Engine for Business Data", font_size=Pt(17), bold=True, color=COLOR_WHITE)
         elif "[Name, Name, Name]" in txt:
-            set_text(s, "Darshan S (Team Lead)", font_size=Pt(17), bold=True, color=COLOR_WHITE)
+            set_text(s, "Darshan S", font_size=Pt(17), bold=True, color=COLOR_WHITE)
 
     # -------------------------------------------------------------
     # SLIDE 2: Architecture & Decision Flow
@@ -239,47 +239,89 @@ def build_brightened_presentation():
             set_text(s, "Evaluated on 13 diverse bid dossiers: 5 fully compliant passes, 6 failure modes (expired ISO, turnover deficit, invalid GSTIN checksum, EMD shortfall, compound failure), and 2 conditional MSME edge cases.", font_size=Pt(12), color=COLOR_BODY)
 
     # -------------------------------------------------------------
-    # SLIDE 9: Team Slide
+    # SLIDE 9: Team Slide (Solo Member: Darshan S)
     # -------------------------------------------------------------
     s9 = prs.slides[8]
+    # Remove Member 2 and Member 3 shapes (boxes and details)
+    to_remove = []
     for s in s9.shapes:
-        if not s.has_text_frame: continue
-        txt = s.text_frame.text.strip()
-        if "[Team name]" in txt:
+        if s.left > Inches(4.5) and s.top > Inches(2.5) and s.top < Inches(6.5):
+            to_remove.append(s)
+    for s in to_remove:
+        sp = s._element
+        sp.getparent().remove(sp)
+
+    # Center and enlarge Darshan's profile card
+    card_w = Inches(6.2)
+    card_h = Inches(3.60)
+    card_left = (Inches(13.33) - card_w) / 2  # Centered at ~3.565 in
+    card_top = Inches(2.88)
+
+    pad_left = card_left + Inches(0.35)
+    val_left = card_left + Inches(1.50)
+    val_w = card_w - Inches(1.85)
+
+    for s in s9.shapes:
+        if s.has_text_frame and "[Team name]" in s.text_frame.text:
             set_text(s, "TeAm AsPirE", font_size=Pt(28), bold=True, color=COLOR_WHITE)
-        elif "[Full name]" in txt:
-            if s.left < Inches(4.5):
-                set_text(s, "Darshan S", font_size=Pt(17), bold=True, color=COLOR_GOLD)
-            elif s.left < Inches(8.5):
-                set_text(s, "AI Decision Agent", font_size=Pt(17), bold=True, color=COLOR_GOLD)
-            else:
-                set_text(s, "Audit Reflection Guardrail", font_size=Pt(17), bold=True, color=COLOR_GOLD)
-        elif "[College name]" in txt:
-            if s.left < Inches(4.5):
-                set_text(s, "Engineering & Technology", font_size=Pt(12), color=COLOR_BODY)
-            elif s.left < Inches(8.5):
-                set_text(s, "TenderPulse Core", font_size=Pt(12), color=COLOR_BODY)
-            else:
-                set_text(s, "CVC Compliance Engine", font_size=Pt(12), color=COLOR_BODY)
-        elif "[3rd / final / fresher]" in txt:
-            if s.left < Inches(4.5):
-                set_text(s, "Final Year (4th Year B.E.)", font_size=Pt(12), color=COLOR_BODY)
-            elif s.left < Inches(8.5):
-                set_text(s, "Production Layer", font_size=Pt(12), color=COLOR_BODY)
-            else:
-                set_text(s, "Verification Layer", font_size=Pt(12), color=COLOR_BODY)
-        elif "[What you own in this build]" in txt:
-            if s.left < Inches(4.5):
-                set_text(s, "Full-Stack AI Architecture, Solvers & Dashboard", font_size=Pt(11), color=COLOR_BODY)
-            elif s.left < Inches(8.5):
-                set_text(s, "Multi-Tool Rule Solvers & Layout Ingestion", font_size=Pt(11), color=COLOR_BODY)
-            else:
-                set_text(s, "Self-Correction & Trajectory Logging", font_size=Pt(11), color=COLOR_BODY)
-        elif "[Profile URL]" in txt:
-            if s.left < Inches(4.5):
-                set_text(s, "https://github.com/darshan-s-44", font_size=Pt(11), color=COLOR_GOLD)
-            else:
-                set_text(s, "https://ai-build-hackathon.onrender.com", font_size=Pt(11), color=COLOR_GOLD)
+        elif s.top > Inches(2.5) and s.top < Inches(6.5):
+            if s.shape_type == 1:  # Background card shape
+                s.left = int(card_left)
+                s.top = int(card_top)
+                s.width = int(card_w)
+                s.height = int(card_h)
+            elif s.has_text_frame:
+                txt = s.text_frame.text.strip()
+                if "MEMBER" in txt or "TEAM" in txt:
+                    s.left = int(pad_left)
+                    s.top = int(card_top + Inches(0.25))
+                    s.width = int(card_w - Inches(0.70))
+                    set_text(s, "TEAM LEAD & SOLE DEVELOPER", font_size=Pt(11), bold=True, color=COLOR_AMBER)
+                elif "Darshan S" in txt or "[Full name]" in txt:
+                    s.left = int(pad_left)
+                    s.top = int(card_top + Inches(0.55))
+                    s.width = int(card_w - Inches(0.70))
+                    set_text(s, "Darshan S", font_size=Pt(24), bold=True, color=COLOR_GOLD)
+                elif "COLLEGE" in txt:
+                    s.left = int(pad_left)
+                    s.top = int(card_top + Inches(1.30))
+                    s.width = int(Inches(1.10))
+                    set_text(s, "COLLEGE", font_size=Pt(11), bold=True, color=COLOR_AMBER)
+                elif "Engineering & Technology" in txt or "[College name]" in txt:
+                    s.left = int(val_left)
+                    s.top = int(card_top + Inches(1.27))
+                    s.width = int(val_w)
+                    set_text(s, "Engineering & Technology", font_size=Pt(12), color=COLOR_BODY)
+                elif "YEAR" in txt:
+                    s.left = int(pad_left)
+                    s.top = int(card_top + Inches(1.80))
+                    s.width = int(Inches(1.10))
+                    set_text(s, "YEAR", font_size=Pt(11), bold=True, color=COLOR_AMBER)
+                elif "Final Year" in txt or "[3rd / final / fresher]" in txt:
+                    s.left = int(val_left)
+                    s.top = int(card_top + Inches(1.77))
+                    s.width = int(val_w)
+                    set_text(s, "Final Year (4th Year B.E.)", font_size=Pt(12), color=COLOR_BODY)
+                elif "ROLE" in txt:
+                    s.left = int(pad_left)
+                    s.top = int(card_top + Inches(2.30))
+                    s.width = int(Inches(1.10))
+                    set_text(s, "ROLE", font_size=Pt(11), bold=True, color=COLOR_AMBER)
+                elif "Full-Stack" in txt or "[What you own in this build]" in txt:
+                    s.left = int(val_left)
+                    s.top = int(card_top + Inches(2.27))
+                    s.width = int(val_w)
+                    set_text(s, "Full-Stack AI Architecture, Solvers & Dashboard", font_size=Pt(12), color=COLOR_BODY)
+                elif "LINKEDIN" in txt or "GITHUB" in txt:
+                    s.left = int(pad_left)
+                    s.top = int(card_top + Inches(2.80))
+                    s.width = int(Inches(1.10))
+                    set_text(s, "GITHUB", font_size=Pt(11), bold=True, color=COLOR_AMBER)
+                elif "github.com" in txt or "[Profile URL]" in txt:
+                    s.left = int(val_left)
+                    s.top = int(card_top + Inches(2.77))
+                    s.width = int(val_w)
+                    set_text(s, "https://github.com/darshan-s-44", font_size=Pt(12), color=COLOR_GOLD)
 
     # -------------------------------------------------------------
     # SLIDE 10: Thank You
